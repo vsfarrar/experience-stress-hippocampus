@@ -1,5 +1,9 @@
 # experience-stress-hippocampus
  Code for analysis and figures for project examining the effect of prior parental experience on CORT and PRL stress series, and hippocampal GR/MR expression in biparental rock doves (*Columba livia*)
+ 
+## Manuscript
+
+(*Once submitted, the associated manuscript will be posted on bioRxiv and link added here*)
 
 ## Directory Structure 
 * **analysis_code**: contains R scripts for analyzing results, statistics, and producing tables for manuscript.
