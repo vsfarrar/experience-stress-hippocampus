@@ -27,7 +27,7 @@ dex_val_plot <-
   theme_dex
 
 # Export Plot ####
-
-#ggsave(paste0("figures/fig2_dex_validation_",current_date,".png"), 
-       #plot = dex_val_plot,
-      #height = 355/97, width = 550/97, dpi = 300)
+setwd("~/Documents/GitHub/experience-stress-hippocampus/")
+ggsave(paste0("figures/fig2_dex_validation_",current_date,".png"), 
+       plot = dex_val_plot,
+      height = 355/97, width = 550/97, dpi = 300)
