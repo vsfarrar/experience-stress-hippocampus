@@ -3,7 +3,9 @@
  
 ## Manuscript
 
-(*Once submitted, the associated manuscript will be posted on bioRxiv and link added here*)
+**Preprint:**
+
+Farrar VS, Morales Gallardo J, Calisi RM. (2022) Prior parental experience attenuates hormonal stress responses and alters hippocampal glucocorticoid receptors in both sexes of the biparental rock dove. *bioRxiv* [doi:10.1101/2022.07.25.501460](https://doi.org/10.1101/2022.07.25.501460)
 
 ## Directory Structure 
 * **analysis_code**: contains R scripts for analyzing results, statistics, and producing tables for manuscript.
