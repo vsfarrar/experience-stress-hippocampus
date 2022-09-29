@@ -56,11 +56,16 @@ horm_blood %>% filter(timepoint == 0) %>%
             sd(sec_to_baseline, na.rm = T))
 
 #effect of time of day on hormones 
-#ANOVA (Krause et al 2015 use ANOVA)
-cor.test(horm_blood$cort_conc, horm_blood2$time_bled)
+cor.test(horm_blood$cort_conc, horm_blood$time_bled)
 
 summary(aov(cort_conc ~ time_bled, data = horm_blood)) 
 summary(aov(prl_conc ~ time_bled, data = horm_blood)) 
+
+#effect of date (time of year) on hormones
+horm_blood$date_bled <- as.Date(horm_blood$d_bled, "%m/%d/%y")
+
+summary(aov(cort_conc ~ date_bled, data = horm_blood)) 
+summary(aov(prl_conc ~ date_bled, data = horm_blood)) 
 
 # EXPERIMENT 2: Hippocampus Gene Exp. ####
 #Methods Analyses 
