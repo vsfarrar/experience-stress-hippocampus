@@ -14,7 +14,7 @@ emm_cort <-
   geom_point(position = position_dodge(5))+
   scale_x_continuous(breaks = c(0,30,60,90)) +
   labs(x = "time(minutes)", y = "estimated marginal means (ng/mL)", color = "experience") + 
-  scale_color_discrete(labels = c("experienced", "inexperienced")) + 
+  scale_color_discrete(labels = c("inexperienced", "experienced")) + 
   theme_bw(base_size = 14) + 
   theme(axis.text = element_text(size = 14, color = "black"))
 
@@ -27,7 +27,7 @@ emm_prl <-
   geom_point(position = position_dodge(5))+
   scale_x_continuous(breaks = c(0,30,60,90)) +
   labs(x = "time(minutes)", y = "estimated marginal means (ng/mL)", color = "experience") + 
-  scale_color_discrete(labels = c("experienced", "inexperienced")) + 
+  scale_color_discrete(labels = c("inexperienced", "experienced")) + 
   theme_bw(base_size = 14) + 
   theme(axis.text = element_text(size = 14, color = "black"))
 

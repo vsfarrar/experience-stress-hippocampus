@@ -43,26 +43,27 @@ fig_prl_exp <-
   geom_point(aes(shape = sex), alpha = 0.5, 
              position = position_dodge(width = 27), size = 2) + 
   geom_vline(xintercept = c(15,45,75), linetype = "dashed") + 
+  #female 30&90
+  geom_signif(annotation = "*", y_position = c(27.5,23.5), xmin = c(19,79), xmax = c(27,87), textsize = 10,vjust = 0.5) +
+  #male 30
+  geom_signif(annotation = "#", y_position = 18, xmin = 32 , xmax = 40, textsize = 5,vjust = 0.2) +
+  #male 90
+  geom_signif(annotation = "#", y_position = 18, xmin = 92 , xmax = 100, textsize = 5,vjust = 0.2) +
   #add significant effect annotations
   annotate(geom = "label", label = "experience*sex*timepoint",x = Inf,y = Inf, hjust = 1.1,vjust = 1.5, 
            fontface = "bold", fill = "white") +
-  geom_signif(annotation = "**", y_position = c(27.5,23.5), xmin = c(19,79), xmax = c(27,87), textsize = 10,vjust = 0.5) +
-  #male 30
-  geom_signif(annotation = "*", y_position = 18, xmin = 32 , xmax = 40, textsize = 10,vjust = 0.5) +
-  #male 90
-  geom_signif(annotation = "#", y_position = 18, xmin = 92 , xmax = 100, textsize = 5,vjust = 0.2) +
   labs(x = "\ntime (minutes)", y = "prolactin (ng/mL)",
        color = "experience", fill = "sex", shape = "sex", linetype = NULL) +  
   scale_fill_manual(values = c("f" = "black", "m" = "white")) + 
   scale_color_manual(labels = c("inexperienced\n(no active nest)", "experienced\n(no active nest)"),
                      values = c( "black", "red")) +
   scale_x_continuous(breaks = c(0,30,60,90)) + 
-  scale_y_continuous(breaks = seq(0,30,by =5)) + 
+  scale_y_continuous(breaks = seq(0,30,by =5), limits = c(0,31)) + 
   theme_dex + 
   #add below-x-axis labels for timepoints
-  annotation_custom(text0,xmin=0,xmax=0,ymin=-4,ymax=-4) + 
-  annotation_custom(text30,xmin=30,xmax=30,ymin=-4,ymax=-4) + 
-  annotation_custom(text90,xmin=90,xmax=90,ymin=-4,ymax=-4) + 
+  annotation_custom(text0,xmin=0,xmax=0,ymin=-5,ymax=-5) + 
+  annotation_custom(text30,xmin=30,xmax=30,ymin=-5,ymax=-5) + 
+  annotation_custom(text90,xmin=90,xmax=90,ymin=-5,ymax=-5) + 
   coord_cartesian(clip = "off")
 
 # cowplot ####

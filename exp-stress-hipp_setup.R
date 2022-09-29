@@ -20,7 +20,7 @@ options(contrasts = c("contr.sum", "contr.poly"))
 
 #DATA ####
 #source data from Dryad: https://doi.org/10.25338/B8KK91
-setwd("~/Documents/projects/experience-stress-hippocampus/cleaned_data/dryad-ready/")
+setwd("~/Documents/experience-stress-series/dryad-data")
 
 #hormone and bleeding data (CORT and PRL)
 horm_blood <- read.csv("Farrar_experience-stress-series_CORT_PRL_hormone-data.csv")
